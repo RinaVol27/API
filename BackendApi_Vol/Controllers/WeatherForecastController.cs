@@ -40,7 +40,7 @@ namespace BackendApi_Vol.Controllers
         {
             for (int i = 0; i < Summaries.Count; i++)
             {
-                if (string.Equals(name, Summaries[i])) { return BadRequest("Duplicate value"); }
+                if (string.Equals(name, Summaries[i])) { return BadRequest("Duplicate value");}
                 else if (i + 1 == Summaries.Count && !string.Equals(name, Summaries[i]))
                 {
                     Summaries.Add(name);
