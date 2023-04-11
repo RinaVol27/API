@@ -33,7 +33,7 @@ namespace BackendApi_Vol.Controllers
             }
             return Ok(u);
         }
-        [HttpGet("{category}")]
+        [HttpGet("{category}")] 
 
         public IActionResult GetByCategory(string category)
         {
