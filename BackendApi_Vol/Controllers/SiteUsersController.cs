@@ -6,11 +6,11 @@ namespace BackendApi_Vol.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ValuesController : ControllerBase
+    public class SiteUsersController : ControllerBase
     {
         public OnlinestoreContext Context { get; }
 
-        public ValuesController(OnlinestoreContext context)
+        public SiteUsersController(OnlinestoreContext context)
         {
             Context = context;
         }
@@ -51,7 +51,7 @@ namespace BackendApi_Vol.Controllers
         public IActionResult Delete(int id)
         {
             SiteUser? u = Context.SiteUsers.Where(x => x.IdUser == id).FirstOrDefault();
-            if(u == null)
+            if (u == null)
             {
                 return BadRequest("Not Found");
             }

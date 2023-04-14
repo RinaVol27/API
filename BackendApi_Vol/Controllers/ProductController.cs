@@ -33,7 +33,7 @@ namespace BackendApi_Vol.Controllers
             }
             return Ok(u);
         }
-        [HttpGet("{category}")] 
+        [HttpGet("category/{category}")] 
 
         public IActionResult GetByCategory(string category)
         {
@@ -44,7 +44,7 @@ namespace BackendApi_Vol.Controllers
             }
             return Ok(u);
         }
-        [HttpGet]
+        [HttpGet("order")]
 
         public IActionResult GetAllSorted()
         {
@@ -56,7 +56,7 @@ namespace BackendApi_Vol.Controllers
             return Ok(u);
         }
 
-        [HttpGet]
+        [HttpGet("desc-order")]
 
         public IActionResult GetAllSortedDesc()
         {
